@@ -1,0 +1,23 @@
+params_grid:
+  all:
+    feature_dim: [32, 64, 128, 256, 512]
+  cuda_test:
+    kernel_kind: [0, 1]
+    use_second_access: [true, false]
+    use_vectorized_loads: [true, false]
+kernel_related_kwargs:
+  all:
+    graph_reordering_partition_size: [-1, 128, 512, 1024, 2048, 4096, 8192, 16384, 64536]
+datasets:
+  base_path: configs/datasets
+  dirs:
+    graphland_remaining:
+      all: true
+    main:
+      all: true
+    secondary:
+      all: false
+      choices:
+        - cora
+        - citeseer
+        - pubmed

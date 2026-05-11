@@ -1,0 +1,28 @@
+params_grid:
+  all:
+    # feature_dim: [256, 512, 1024, 2048, 4096]
+    feature_dim: [512]
+    heads: [2]
+kernel_related_kwargs:
+  all:
+    graph_reordering_partition_size: [-1, 128, 8192, 65536]
+datasets:
+  base_path: configs/datasets
+  dirs:
+    graphland_remaining:
+      all: true
+    main:
+      all: true
+      # choices:
+      #   - ogbn_products
+      #   - ogbn_arxiv
+      #   - hm_categories
+      #   - city_reviews
+      #   - artnet_views
+      #   - twitch_views
+    secondary:
+      all: false
+      choices:
+        - cora
+        - citeseer
+        - pubmed
