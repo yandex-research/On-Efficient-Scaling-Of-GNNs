@@ -1,5 +1,7 @@
 # GNN Benchmarking & Acceleration Framework
 
+Official repository for the ICML 2026 Spotlight paper **"On Efficient Scaling of GNNs via IO-Aware Layers Implementations"**
+
 A framework for benchmarking and accelerating Graph Neural Network convolutions on GPUs.
 Includes custom CUDA and Triton kernels for SpMM/attention, wrappers for PyG, DGL, cuGraph,
 TCGNN, DFGNN, and FuseGNN, plus Optuna-based kernel autotuning. Models, datasets, and training
